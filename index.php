@@ -6,11 +6,12 @@
  */
 function getConnection($configFile) {
     $host = $configFile->fgets();
+    $port = $configFile->fgets();
     $database = $configFile->fgets();
     $username = $configFile->fgets();
     $password = $configFile->fgets();
     
-    $connection = new mysqli($host, $username, $password, $database);
+    $connection = new mysqli($host, $username, $password, $database, $port);
     
     if ($connection->connect_error) {
         die('<h1>MYSQL CONNECT FAILED.</h1><p>' . $connection->connect_error . '</p>');
