@@ -6,10 +6,10 @@
  * @return mysqli
  */
 function getDbConnection($configFile, $tunnel) {
-    $host = $configFile->fgets();
-    $port = $configFile->fgets();
-    $database = $configFile->fgets();
-    $username = $configFile->fgets();
+    $host = trim($configFile->fgets());
+    $port = trim($configFile->fgets());
+    $database = trim($configFile->fgets());
+    $username = trim($configFile->fgets());
     $password = null; // TODO handle pass
 
     $connection = new mysqli($host, $username, $password, $database, $port, $tunnel);
@@ -26,13 +26,13 @@ function getDbConnection($configFile, $tunnel) {
  * @return resource ssh session
  */
 function getSshConnection($configFile) {
-    $host = $configFile->fgets();
-    $port = $configFile->fgets();
+    $host = trim($configFile->fgets());
+    $port = trim($configFile->fgets());
 
     $ssh = ssh2_connect($host, $port);
 
-    $username = $configFile->fgets();
-    $password = $configFile->fgets();
+    $username = trim($configFile->fgets());
+    $password = trim($configFile->fgets());
 
     if (!ssh2_auth_password($ssh, $username, $password)) {
         die('<h1>SSH authentication failed</h1>');
@@ -47,8 +47,8 @@ function getSshConnection($configFile) {
  * @return resource tunnel
  */
 function getTunnelConnection($ssh, $configFile) {
-    $destination = $configFile->fgets();
-    $port = $configFile->fgets();
+    $destination = trim($configFile->fgets());
+    $port = trim($configFile->fgets());
     
     return ssh2_tunnel($ssh, $destination, $port);
 }
