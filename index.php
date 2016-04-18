@@ -1,3 +1,28 @@
+<?php
+
+/**
+ * @param SplFileObject $configFile
+ * @return mysqli
+ */
+function getConnection($configFile) {
+    $host = $configFile->fgets();
+    $database = $configFile->fgets();
+    $username = $configFile->fgets();
+    $password = $configFile->fgets();
+    
+    $connection = new mysqli($host, $username, $password, $database);
+    
+    if ($connection->connect_error) {
+        die('<h1>MYSQL CONNECT FAILED.</h1>');
+    }
+    
+    return $connection;
+}
+
+$connection = getConnection(new SplFileObject('config/mysql.dat'));
+
+?>
+
 <html>
 <head>
     <title>BrassSnakeShop</title>
