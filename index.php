@@ -9,11 +9,7 @@ function getConnection($configFile) {
     $port = $configFile->fgets();
     $database = $configFile->fgets();
     $username = $configFile->fgets();
-    $password = $configFile->fgets();
-
-    if ($password == '') {
-        $password = null;
-    }
+    $password = null; // TODO handle pass
 
     $connection = new mysqli($host, $username, $password, $database, $port);
     
