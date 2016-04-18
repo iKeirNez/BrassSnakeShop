@@ -13,7 +13,7 @@ function getConnection($configFile) {
     $connection = new mysqli($host, $username, $password, $database);
     
     if ($connection->connect_error) {
-        die('<h1>MYSQL CONNECT FAILED.</h1>');
+        die('<h1>MYSQL CONNECT FAILED.</h1><p>' . $connection->connect_error . '</p>');
     }
     
     return $connection;
