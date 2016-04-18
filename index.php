@@ -10,7 +10,11 @@ function getConnection($configFile) {
     $database = $configFile->fgets();
     $username = $configFile->fgets();
     $password = $configFile->fgets();
-    
+
+    if ($password == '') {
+        $password = null;
+    }
+
     $connection = new mysqli($host, $username, $password, $database, $port);
     
     if ($connection->connect_error) {
