@@ -19,8 +19,8 @@ $connection = getDbConnection(new SplFileObject('config/mysql.dat'));
 <div id="footer" align="center">
     <hr>
     Last Commit by <?= getLastCommitterName() ?>
-    
-    <? $commitHash = getLastCommitHash() ?>
+
+    <?php $commitHash = getLastCommitHash() ?>
     <code><a href="<?= GITHUB_COMMIT_PREFIX . $commitHash ?>" target="_blank"><?= $commitHash ?></a></code><br />
 </div>
 </body>
