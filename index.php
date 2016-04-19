@@ -1,24 +1,7 @@
 <?php
 
-/**
- * @param SplFileObject $configFile
- * @return mysqli
- */
-function getDbConnection($configFile) {
-    $host = trim($configFile->fgets());
-    $port = trim($configFile->fgets());
-    $database = trim($configFile->fgets());
-    $username = trim($configFile->fgets());
-    $password = null; // TODO handle pass
-
-    $connection = new mysqli($host, $username, $password, $database, $port);
-    
-    if ($connection->connect_error) {
-        die('<h1>MYSQL CONNECT FAILED.</h1><p>' . $connection->connect_error . '</p>');
-    }
-    
-    return $connection;
-}
+require_once('includes/functions.php');
+require_once('includes/db.php');
 
 $connection = getDbConnection(new SplFileObject('config/mysql.dat'));
 
