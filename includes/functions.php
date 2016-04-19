@@ -15,3 +15,14 @@ function parseValue($strValue) {
     
     return $value;
 }
+
+function getLastCommitHash() {
+    return shell_exec('git rev-parse HEAD');
+}
+
+/**
+ * @return string
+ */
+function getLastCommitterName() {
+    return shell_exec('git log -1 --pretty=%an');
+}
