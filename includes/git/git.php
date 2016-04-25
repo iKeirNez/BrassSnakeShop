@@ -13,7 +13,7 @@ class Git  {
 
         if ($mapFile->isFile() && $mapFile->isReadable()) {
             while ($line = trim($mapFile->fgets())) {
-                $parts = explode($line, ' ');
+                $parts = explode(' ', $line);
 
                 if (count($parts) != 2) {
                     die('Not exactly 2 parts: "' . $line . '"');
