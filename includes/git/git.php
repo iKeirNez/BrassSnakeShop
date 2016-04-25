@@ -1,13 +1,14 @@
 <?php
 
 require_once('git_user.php');
+Git::init();
 
 class Git  {
 
     /** @var array */
     protected static $usernameMap = array();
 
-    function __construct() {
+    static function init() {
         $mapFile = new SplFileObject('../config/username-map.dat');
 
         if ($mapFile->isFile() && $mapFile->isReadable()) {
