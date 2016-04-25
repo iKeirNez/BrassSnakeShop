@@ -15,13 +15,8 @@ $connection = getDbConnection(new SplFileObject('config/mysql.dat'));
 <body>
 <h1>BrassSnakeShop</h1>
 <p>Welcome to the BrassSnakeShop, this will soon be a fully fledged store.</p>
-<br />
-<div id="footer" align="center">
-    <hr>
-    Last Commit by <?= getLastCommitterName() ?><br />
 
-    <?php $commitHash = getLastCommitHash() ?>
-    <code><a href="<?= GITHUB_COMMIT_PREFIX . $commitHash ?>" target="_blank"><?= $commitHash ?></a></code><br />
-</div>
+<br />
+<?php include('includes/footer.php') ?>
 </body>
 </html>
