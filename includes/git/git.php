@@ -22,7 +22,7 @@ class Git  {
                         die('Not exactly 2 parts: "' . $line . '"');
                     }
 
-                    $email = $parts[0];
+                    $email = strtolower($parts[0]);
                     $name = $parts[1];
 
                     self::$usernameMap[$email] = $name;
@@ -70,6 +70,6 @@ class Git  {
      * @return string
      */
     private static function getLastCommitterEmail() {
-        return trim(shell_exec('git log -1 --pretty=%ae'));
+        return strtolower(trim(shell_exec('git log -1 --pretty=%ae')));
     }
 }
