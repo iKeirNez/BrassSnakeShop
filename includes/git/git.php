@@ -1,4 +1,8 @@
-<?php class Git  {
+<?php
+
+require_once('git_user.php');
+
+class Git  {
 
     /** @var array */
     protected static $usernameMap = array();
