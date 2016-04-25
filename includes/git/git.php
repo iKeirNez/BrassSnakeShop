@@ -25,7 +25,7 @@ class Git  {
                     $email = $parts[0];
                     $name = $parts[1];
 
-                    $usernameMap[$email] = $name;
+                    self::$usernameMap[$email] = $name;
                 }
             }
         }
