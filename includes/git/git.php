@@ -14,8 +14,8 @@
                     die('Not exactly 2 parts: "' . $line . '"');
                 }
 
-                $name = $parts[0];
-                $email = $parts[1];
+                $email = $parts[0];
+                $name = $parts[1];
 
                 $usernameMap[$email] = $name;
             }
