@@ -12,17 +12,21 @@ class Git  {
         $mapFile = new SplFileObject('config/username-mapping.dat');
 
         if ($mapFile->isFile() && $mapFile->isReadable()) {
-            while ($line = trim($mapFile->fgets())) {
-                $parts = explode(' ', $line);
+            while (!$mapFile->eof()) { // read until end of file
+                $line = trim($mapFile->fgets());
 
-                if (count($parts) != 2) {
-                    die('Not exactly 2 parts: "' . $line . '"');
+                if ($line) { // check line isn't empty
+                    $parts = explode(' ', $line);
+
+                    if (count($parts) != 2) {
+                        die('Not exactly 2 parts: "' . $line . '"');
+                    }
+
+                    $email = $parts[0];
+                    $name = $parts[1];
+
+                    $usernameMap[$email] = $name;
                 }
-
-                $email = $parts[0];
-                $name = $parts[1];
-
-                $usernameMap[$email] = $name;
             }
         }
     }
