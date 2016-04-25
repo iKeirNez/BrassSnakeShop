@@ -25,7 +25,7 @@
     static function getLastCommitter() {
         $fullName = self::getLastCommitterName();
         $email = self::getLastCommitterEmail();
-        $username = self::$usernameMap[$email];
+        $username = array_key_exists($email, self::$usernameMap) ? self::$usernameMap[$email] : null;
         return new GitUser($fullName, $email, $username);
     }
 
