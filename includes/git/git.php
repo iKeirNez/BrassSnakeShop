@@ -9,7 +9,7 @@ class Git  {
     protected static $usernameMap = array();
 
     static function init() {
-        $mapFile = new SplFileObject('../../config/username-mapping.dat');
+        $mapFile = new SplFileObject('config/username-mapping.dat');
 
         if ($mapFile->isFile() && $mapFile->isReadable()) {
             while ($line = trim($mapFile->fgets())) {
