@@ -13,4 +13,5 @@ $gitUser = Git::getLastCommitter();
     <hr>
     Last Commit by <?= Git::getAuthorDisplayCode($gitUser) ?><br />
     <code><a href="<?= GITHUB_COMMIT_PREFIX . $commitHash ?>" target="_blank"><?= $commitHash ?></a></code><br />
+    &copy; 2016 <?= WEBSITE_NAME ?>
 </div>

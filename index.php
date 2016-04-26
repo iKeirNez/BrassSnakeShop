@@ -10,11 +10,11 @@ $connection = getDbConnection(new SplFileObject('config/mysql.dat'));
 
 <html>
 <head>
-    <title>BrassSnakeShop</title>
+    <title><?= WEBSITE_NAME ?></title>
 </head>
 <body>
-<h1>BrassSnakeShop</h1>
-<p>Welcome to the BrassSnakeShop, this will soon be a fully fledged store.</p>
+<h1><?= WEBSITE_NAME ?></h1>
+<p>Welcome to the <?= WEBSITE_NAME ?>, this will soon be a fully fledged store.</p>
 
 <br />
 <?php include('includes/footer.php') ?>
