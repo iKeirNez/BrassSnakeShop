@@ -30,6 +30,7 @@ if (!empty($_POST)) {
 
     $statement = $mysqli->prepare('INSERT INTO users (username, first_name, last_name, email, salt, password_hash) VALUES (?, ?, ?, ?, ?, ?);');
     $statement->bind_param('ssssss', $_POST['username'], $_POST['first_name'], $_POST['last_name'], $_POST['email'], $salt, $password);
+    $statement->execute();
 
     //header('Location: login.php');
     die('Redirecting...');
