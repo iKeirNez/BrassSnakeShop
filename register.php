@@ -36,7 +36,7 @@ if (!empty($_POST)) {
     $statement->bind_param('s', $salt);
     $statement->bind_param('s', $hash);
 
-    header('Location: login.php');
+    //header('Location: login.php');
     die('Redirecting...');
 }
 
