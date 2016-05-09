@@ -29,7 +29,7 @@ if (!empty($_POST)) {
     $password = hashPassword($_POST['password'], $salt);
 
     $statement = $mysqli->prepare('INSERT INTO users (username, first_name, last_name, email, salt, password_hash) VALUES (?, ?, ?, ?, ?, ?);');
-    $statement->bind_param('s', $_POST['username'], $_POST['first_name'], $_POST['last_name'], $_POST['email'], $salt, $password);
+    $statement->bind_param('ssssss', $_POST['username'], $_POST['first_name'], $_POST['last_name'], $_POST['email'], $salt, $password);
 
     //header('Location: login.php');
     die('Redirecting...');
