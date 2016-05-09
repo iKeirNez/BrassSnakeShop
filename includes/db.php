@@ -1,5 +1,7 @@
 <?php
 
+require_once('config.php');
+
 /**
  * Connects to a database with settings defined in the configuration.
  * @return mysqli
