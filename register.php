@@ -36,6 +36,8 @@ if (!empty($_POST)) {
     die('Redirecting...');
 }
 
+include('includes/header.php');
+
 ?>
 
 <h2>Register</h2>
@@ -58,3 +60,5 @@ if (!empty($_POST)) {
     <br /><br />
     <input type="submit" value="Register" />
 </form>
+
+<?php include ('includes/footer.php');
