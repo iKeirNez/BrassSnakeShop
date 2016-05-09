@@ -9,6 +9,7 @@ $gitUser = Git::getLastCommitter();
 
 ?>
 
+<br />
 <div id="footer" align="center">
     <hr>
     Last Commit by <?= Git::getAuthorDisplayCode($gitUser) ?><br />

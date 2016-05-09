@@ -13,10 +13,10 @@ $connection = getMainDbConnection();
     <title><?= WEBSITE_NAME ?></title>
 </head>
 <body>
-<h1><?= WEBSITE_NAME ?></h1>
+<?php include('includes/header.php') ?>
+
 <p>Welcome to the <?= WEBSITE_NAME ?>, this will soon be a fully fledged store.</p>
 
-<br />
 <?php include('includes/footer.php') ?>
 </body>
 </html>
