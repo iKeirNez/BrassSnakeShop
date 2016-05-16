@@ -11,16 +11,19 @@ $connection = getMainDbConnection();
 <html>
 <head>
     <title><?= WEBSITE_NAME ?></title>
-    <link rel="stylesheet" type="text/css" href="includes/css/main.css"> 
+    <!-- ADDITION OF EXTERNAL ASSETS - BC 16/05/16 15:33 -->
+    <link rel="stylesheet" type="text/css" href="includes/css/main.css">
+    <script src="includes/js/main.js"></script>
+    <!-- END OF ADDITION - BC 16/05/16 15:33 -->
 </head>
 <body>
 <?php include('includes/header.php') ?>
 
-<p>Welcome to the <?= WEBSITE_NAME ?>, this will soon be a fully fledged store.</p>
+<p>Welcome to the <?= WEBSITE_NAME ?>, this will soon be a fully fledged accounts page.</p>
 
 <!--    Addition of forms for login 
         CSS location        -  "//includes/css/main.css"
-        JavaScript location -  "//includes/js/main.js" - BC 16/05/16 15:09-->
+        JavaScript location -  "//includes/js/main.js" - BC 16/05/16 15:09 -->
         
 <form action="#">
   
@@ -44,7 +47,7 @@ $connection = getMainDbConnection();
   </fieldset>
   
 </form>
-<!-- END OF ADDITION - BC 16/05/16 15:09-->
+<!-- END OF ADDITION - BC 16/05/16 15:09 -->
 
 <?php include('includes/footer.php') ?>
 </body>
