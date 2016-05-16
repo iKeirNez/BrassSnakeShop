@@ -18,7 +18,10 @@ $connection = getMainDbConnection();
 
 <p>Welcome to the <?= WEBSITE_NAME ?>, this will soon be a fully fledged store.</p>
 
-<!-- Following code is a test - BC 16/05/16 15:09-->
+<!--    Addition of forms for login 
+        CSS location        -  "//includes/css/main.css"
+        JavaScript location -  "//includes/js/main.js" - BC 16/05/16 15:09-->
+        
 <form action="#">
   
   <fieldset>
@@ -41,7 +44,7 @@ $connection = getMainDbConnection();
   </fieldset>
   
 </form>
-<!-- END OF TEST - BC 16/05/16 15:09-->
+<!-- END OF ADDITION - BC 16/05/16 15:09-->
 
 <?php include('includes/footer.php') ?>
 </body>
