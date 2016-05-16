@@ -9,8 +9,8 @@ require_once('config.php');
 function getMainDbConnection() {
     $connection = new mysqli(MYSQL_HOST, MYSQL_USERNAME, MYSQL_PASSWORD, MYSQL_DATABASE, MYSQL_PORT);
 
-    if ($connection->connect_error) {
-        die('<h1>MYSQL CONNECT FAILED.</h1><p>' . $connection->connect_error . '</p>');
+    if (mysqli_connect_errno()) {
+        die('<h1>MYSQL CONNECT FAILED.</h1><p>' . mysqli_connect_error() . '</p>');
     }
 
     return $connection;
