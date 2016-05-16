@@ -9,11 +9,6 @@ if (!empty($_POST)) {
     checkInputVar($_POST['password'], 'Please enter your password.');
 
     $mysqli = getMainDbConnection();
-
-    if (checkRowExists($mysqli, 'username', 's', $_POST['username'])) {
-        die('That username is already in use.');
-    }
-
     $salt = getSaltForUser($_POST['username']);
     $password = hashPassword($_POST['password'], $salt);
 
