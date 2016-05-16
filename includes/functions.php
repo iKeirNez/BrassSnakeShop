@@ -1,11 +1,6 @@
 <?php
 
-/**
- * @return string random salt, 24 characters long
- */
-function generateRandomSalt() {
-    return strtr(base64_encode(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM)), '+', '.');
-}
+require_once('db.php');
 
 /**
  * String values equal to '#NULL#' will be replaced with null.
@@ -50,6 +45,25 @@ function checkRowExists($mysqli, $column, $type, $value) {
     $statement->execute();
     $statement->bind_result($total);
     return $total > 0;
+}
+
+/**
+ * @return string random salt, 24 characters long
+ */
+function generateRandomSalt() {
+    return strtr(base64_encode(mcrypt_create_iv(16, MCRYPT_DEV_URANDOM)), '+', '.');
+}
+
+/**
+ * @param string $username
+ * @return string
+ */
+function getSaltForUser($username) {
+    $statement = getMainDbConnection()->prepare('SELECT salt FROM users WHERE username = ? LIMIT 1;');
+    $statement->bind_param('s', $username);
+    $statement->execute();
+    $statement->bind_result($salt);
+    return $salt;
 }
 
 /**
