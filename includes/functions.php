@@ -61,12 +61,9 @@ function generateRandomSalt() {
 function getSaltForUser($username) {
     $statement = getMainDbConnection()->prepare('SELECT salt FROM users WHERE username = ? LIMIT 1;');
     $statement->bind_param('s', $username);
-
-    if (!$statement->execute()) {
-        die('Failed to fetch salt: ' . $statement->error);
-    }
-
+    $statement->execute();
     $statement->bind_result($salt);
+    $statement->fetch();
     return $salt;
 }
 
