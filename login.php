@@ -15,7 +15,7 @@ if (!empty($_POST)) {
     $statement = $mysqli->prepare('SELECT id FROM users WHERE username = ? AND password_hash = ? LIMIT 1;');
     $statement->bind_param('ss', $_POST['username'], $password);
     $statement->execute();
-    $statement->fetch();
+    $statement->store_result();
 
     if ($statement->num_rows != 1) {
         die("Invalid username/password combo.");
