@@ -19,7 +19,7 @@ $connection = getMainDbConnection();
 <body>
 <?php include('includes/header.php') ?>
 
-<p>Welcome to the <?= WEBSITE_NAME ?>, this will soon be a fully fledged store.</p>
+<p>Welcome to the <?= WEBSITE_NAME ?>, this will soon be a fully fledged accounts page.</p>
 
 <!--    Addition of forms for login 
         CSS location        -  "//includes/css/main.css"
