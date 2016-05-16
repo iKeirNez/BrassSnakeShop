@@ -34,6 +34,8 @@ if (!empty($_POST)) {
     if ($statement->execute()) {
         header('Location: login.php');
         die('Redirecting...');
+    } else {
+        die($statement->error);
     }
 }
 
