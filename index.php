@@ -11,6 +11,7 @@ $connection = getMainDbConnection();
 <html>
 <head>
     <title><?= WEBSITE_NAME ?></title>
+    <link rel="stylesheet" type="text/css" href="includes/css/main.css"> 
 </head>
 <body>
 <?php include('includes/header.php') ?>
