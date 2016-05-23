@@ -15,11 +15,14 @@ if (!empty($_POST)) {
     $statement = $mysqli->prepare('SELECT id FROM users WHERE username = ? AND password_hash = ? LIMIT 1;');
     $statement->bind_param('ss', $_POST['username'], $password);
     $statement->execute();
+    $statement->bind_result($userId);
     $statement->store_result();
 
     if ($statement->num_rows != 1) {
         die("Invalid username/password combo.");
     }
+
+    $_SESSION['user_id'] = $userId;
 
     header('Location: index.php');
     die('Log in successful, redirecting...');

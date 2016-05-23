@@ -18,36 +18,38 @@ $connection = getMainDbConnection();
 </head>
 <body>
 <?php include('includes/header.php') ?>
+<?php session_start(); ?>
 
-<p>Welcome to the <?= WEBSITE_NAME ?>, this will soon be a fully fledged accounts page.</p>
+<? if (isset($_SESSION['user_id'])): ?>
+    <p>Welcome back, <?= $_SESSION['user_id'] ?></p>
+<? else: ?>
+    <!--    Addition of forms for login 
+            CSS location        -  "//includes/css/main.css"
+            JavaScript location -  "//includes/js/main.js" - BC 16/05/16 15:09 -->
+    <form action="login.php" method="post">
 
-<!--    Addition of forms for login 
-        CSS location        -  "//includes/css/main.css"
-        JavaScript location -  "//includes/js/main.js" - BC 16/05/16 15:09 -->
-        
-<form action="login.php" method="post">
-  
-  <fieldset>
-    
-    <legend>Sign In</legend>
-    
-    <label for="username" class="vhide">Username</label>
-    <input id="username" name="username" type="text" placeholder="Username" required minlength="2">
-    
-    <label for="password" class="vhide">Password</label>
-    <input id="password" name="password" type="password" placeholder="Password" required minlength="6">
-    
-    <input type="checkbox" name="remember" id="remember" class="vhide">
-    <label for="remember">
-      <i class="octicon octicon-check"></i> Remember all the things
-    </label>
-        
-    <button class="signin">Sign in</button>
-    
-  </fieldset>
-  
-</form>
-<!-- END OF ADDITION - BC 16/05/16 15:09 -->
+        <fieldset>
+
+            <legend>Sign In</legend>
+
+            <label for="username" class="vhide">Username</label>
+            <input id="username" name="username" type="text" placeholder="Username" required minlength="2">
+
+            <label for="password" class="vhide">Password</label>
+            <input id="password" name="password" type="password" placeholder="Password" required minlength="6">
+
+            <input type="checkbox" name="remember" id="remember" class="vhide">
+            <label for="remember">
+                <i class="octicon octicon-check"></i> Remember all the things
+            </label>
+
+            <button class="signin">Sign in</button>
+
+        </fieldset>
+
+    </form>
+    <!-- END OF ADDITION - BC 16/05/16 15:09 -->
+<? endif; ?>
 
 <?php include('includes/footer.php') ?>
 </body>
