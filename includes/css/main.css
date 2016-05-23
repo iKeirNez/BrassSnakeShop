@@ -205,6 +205,10 @@ a:link{
   color:#24d6a6 ;
 }
 
+a:link:visited{
+  color:#24d6a6 ;
+}
+
 #footer{
     position: absolute;
     bottom: 0;
