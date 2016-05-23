@@ -22,6 +22,7 @@ if (!empty($_POST)) {
         die("Invalid username/password combo.");
     }
 
+    session_start();
     $_SESSION['user_id'] = $userId;
 
     header('Location: index.php');
