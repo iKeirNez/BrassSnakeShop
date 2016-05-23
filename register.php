@@ -32,7 +32,7 @@ if (!empty($_POST)) {
     $statement->bind_param('ssssss', $_POST['username'], $_POST['first_name'], $_POST['last_name'], $_POST['email'], $salt, $password);
 
     if ($statement->execute()) {
-        header('Location: login.php');
+        header('Location: index.php');
         die('Redirecting...');
     } else {
         die($statement->error);
