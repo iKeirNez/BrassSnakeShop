@@ -36,7 +36,7 @@ input, input + label > i {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-input[type=text][type=password] {
+input[type=text] input[type=password] {
   font-size: 1.2em;
   line-height: 1;
   padding: 0.3em 0.4em;
