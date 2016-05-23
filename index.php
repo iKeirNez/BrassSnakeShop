@@ -35,7 +35,7 @@ $connection = getMainDbConnection();
     <input id="username" name="username" type="text" placeholder="Username" required minlength="2">
     
     <label for="password" class="vhide">Password</label>
-    <input id="password" name="password" type="text" placeholder="Password" required minlength="6">
+    <input id="password" name="password" type="password" placeholder="Password" required minlength="6">
     
     <input type="checkbox" name="remember" id="remember" class="vhide">
     <label for="remember">
