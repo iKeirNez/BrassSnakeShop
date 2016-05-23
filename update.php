@@ -5,7 +5,10 @@ require_once('includes/config.php');
 echo '<b>Output:</b><br />';
 echo 'Executing...<br />';
 
-exec('sh scripts/update.sh', $message, $code);
+exec('sh scripts/update.sh', $messages, $code);
 
-echo $message . '<br />';
+foreach ($messages as $message) {
+    echo $message . '<br />';
+}
+
 echo 'Process exited with code: ' . $code;
