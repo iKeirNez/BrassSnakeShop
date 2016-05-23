@@ -20,9 +20,9 @@ $connection = getMainDbConnection();
 <?php include('includes/header.php') ?>
 <?php session_start(); ?>
 
-<? if (isset($_SESSION['user_id'])): ?>
+<?php if (isset($_SESSION['user_id'])): ?>
     <p>Welcome back, <?= $_SESSION['user_id'] ?></p>
-<? else: ?>
+<?php else: ?>
     <!--    Addition of forms for login 
             CSS location        -  "//includes/css/main.css"
             JavaScript location -  "//includes/js/main.js" - BC 16/05/16 15:09 -->
@@ -49,7 +49,7 @@ $connection = getMainDbConnection();
 
     </form>
     <!-- END OF ADDITION - BC 16/05/16 15:09 -->
-<? endif; ?>
+<?php endif; ?>
 
 <?php include('includes/footer.php') ?>
 </body>
