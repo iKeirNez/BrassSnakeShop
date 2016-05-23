@@ -25,7 +25,7 @@ $connection = getMainDbConnection();
         CSS location        -  "//includes/css/main.css"
         JavaScript location -  "//includes/js/main.js" - BC 16/05/16 15:09 -->
         
-<form action="#">
+<form action="login.php" method="post">
   
   <fieldset>
     

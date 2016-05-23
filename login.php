@@ -22,7 +22,7 @@ if (!empty($_POST)) {
     }
 
     header('Location: index.php');
-    die('Redirecting...');
+    die('Log in successful, redirecting...');
 }
 
 include('includes/header.php');
