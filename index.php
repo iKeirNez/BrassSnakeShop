@@ -22,7 +22,7 @@ session_start();
 <?php include('includes/header.php') ?>
 
 <?php if (isset($_SESSION['user_id'])): ?>
-    <p>Welcome back, <?= $_SESSION['user_id'] ?></p>
+    <p>Welcome back, <?= $_SESSION['username'] ?></p>
 <?php else: ?>
     <!--    Addition of forms for login 
             CSS location        -  "//includes/css/main.css"
