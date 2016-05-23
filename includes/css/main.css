@@ -200,3 +200,12 @@ body {
 * {
   box-sizing: border-box;
 }
+
+footer{
+    position: absolute; /* Allows you to position the element anywhere
+                           you want without affecting other elements */
+    bottom: 0;  /* Distance from bottom of element to bottom of page set to 0 */
+    height: 60px; /* Footer is 60 pixels high, not too important */
+    width: 100%;  /* width of footer is all the width of the parent element, which
+                    is all available space here. */
+}
