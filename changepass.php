@@ -34,7 +34,7 @@ include ('includes/header.php');
 
 ?>
 
-<h2>Register</h2>
+<h2>Change Password</h2>
 
 <form action="changepass.php" method="post">
     New Password:<br />

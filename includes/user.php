@@ -1,13 +1,13 @@
 <?php class User {
 
-    private $userId;
+    private $id;
     private $username;
     private $firstName;
     private $lastName;
     private $email;
     
-    function User($userId, $username, $firstName, $lastName, $email) {
-        $this->userId = $userId;
+    function User($id, $username, $firstName, $lastName, $email) {
+        $this->id = $id;
         $this->username = $username;
         $this->firstName = $firstName;
         $this->lastName = $lastName;
@@ -17,8 +17,8 @@
     /**
      * @return integer
      */
-    public function getUserId() {
-        return $this->userId;
+    public function getId() {
+        return $this->id;
     }
 
     /**
