@@ -14,7 +14,7 @@ if (!empty($_POST)) {
     $salt = getSaltForUser($_POST['username']);
     $password = hashPassword($_POST['password'], $salt);
 
-    $statement = $mysqli->prepare('SELECT id, username FROM users WHERE username = ? AND password_hash = ? LIMIT 1;');
+    $statement = $mysqli->prepare('SELECT id, username, email, first_name, last_name FROM users WHERE username = ? AND password_hash = ? LIMIT 1;');
     $statement->bind_param('ss', $_POST['username'], $password);
     $statement->execute();
     $statement->store_result();
@@ -23,11 +23,11 @@ if (!empty($_POST)) {
         die("Invalid username/password combo.");
     }
 
-    $statement->bind_result($userId, $username);
+    $statement->bind_result($id, $username, $email, $firstName, $lastName);
     $statement->fetch();
 
-    $_SESSION['user_id'] = $userId;
-    $_SESSION['username'] = $username;
+    $user = new User($id, $username, $firstName, $lastName, $email);
+    $_SESSION['user'] = $user;
     
     header('Location: index.php');
     die('Log in successful, redirecting...');

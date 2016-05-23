@@ -25,8 +25,8 @@ session_start();
             <?php include('includes/header.php') ?>
 	        </div>
 	    <div id="content">
-            <?php if (isset($_SESSION['user_id'])): ?>
-            <p>Welcome back, <?= $_SESSION['username'] ?></p>
+            <?php if (isset($_SESSION['user'])): ?>
+            <p>Welcome back, <?= $_SESSION['user']->getFirstName(); ?></p>
             <?php else: ?>
             <!--    Addition of forms for login 
                     CSS location        -  "//includes/css/main.css"
