@@ -201,6 +201,10 @@ body {
   box-sizing: border-box;
 }
 
+a:link{
+  color:#24d6a6 ;
+}
+
 #footer{
     position: absolute;
     bottom: 0;
