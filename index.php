@@ -6,6 +6,8 @@ require_once('includes/db.php');
 
 $connection = getMainDbConnection();
 
+session_start();
+
 ?>
 
 <html>
@@ -18,7 +20,6 @@ $connection = getMainDbConnection();
 </head>
 <body>
 <?php include('includes/header.php') ?>
-<?php session_start(); ?>
 
 <?php if (isset($_SESSION['user_id'])): ?>
     <p>Welcome back, <?= $_SESSION['user_id'] ?></p>
