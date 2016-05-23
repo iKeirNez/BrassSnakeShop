@@ -66,55 +66,55 @@ input[type=text], input[type=password]:-ms-input-placeholder {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-input[type=text], input[type=password] + label.error {
+input[type=text] + label.error {
   color: #d84966;
   margin: -1em 0 2em;
   display: block;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-input[type=text], input[type=password]:hover {
+input[type=text]:hover {
   border-color: #4e5966;
 }
-input[type=text], input[type=password]:hover::-webkit-input-placeholder {
+input[type=text]:hover::-webkit-input-placeholder {
   color: #3f4752;
 }
-input[type=text], input[type=password]:hover:-moz-placeholder {
+input[type=text]:hover:-moz-placeholder {
   color: #3f4752;
 }
-input[type=text], input[type=password]:hover::-moz-placeholder {
+input[type=text]:hover::-moz-placeholder {
   color: #3f4752;
 }
-input[type=text], input[type=password]:hover:-ms-input-placeholder {
+input[type=text]:hover:-ms-input-placeholder {
   color: #3f4752;
 }
-input[type=text], input[type=password].error {
+input[type=text].error {
   border-color: #d84966;
 }
-input[type=text], input[type=password].error:hover, input[type=text], input[type=password].error:focus {
+input[type=text].error:hover, input[type=text].error:focus {
   border-color: #b27b1c;
 }
-input[type=text], input[type=password].error:hover + label.error, input[type=text], input[type=password].error:focus + label.error {
+input[type=text].error:hover + label.error, input[type=text].error:focus + label.error {
   color: #b27b1c;
 }
-input[type=text], input[type=password]:focus {
+input[type=text]:focus {
   outline: none;
   border-color: #39a086;
 }
-input[type=text], input[type=password]:focus::-webkit-input-placeholder {
+input[type=text]:focus::-webkit-input-placeholder {
   -webkit-transform: translateX(20px);
   transform: translateX(20px);
   opacity: 0;
 }
-input[type=text], input[type=password]:focus:-moz-placeholder {
+input[type=text]:focus:-moz-placeholder {
   transform: translateX(20px);
   opacity: 0;
 }
-input[type=text], input[type=password]:focus::-moz-placeholder {
+input[type=text]:focus::-moz-placeholder {
   transform: translateX(20px);
   opacity: 0;
 }
-input[type=text], input[type=password]:focus:-ms-input-placeholder {
+input[type=text]:focus:-ms-input-placeholder {
   transform: translateX(20px);
   opacity: 0;
 }
