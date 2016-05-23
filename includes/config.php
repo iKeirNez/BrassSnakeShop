@@ -4,7 +4,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-define('WEBSITE_NAME', 'BrassSnakeStudentAdministrationPortal [BRSSAP]');
+define('WEBSITE_NAME', 'BSSAP');
+define('COMPANY_NAME', 'BrassSnakeAssociation');
 
 define('MYSQL_HOST', '127.0.0.1');
 define('MYSQL_PORT', 3306);
