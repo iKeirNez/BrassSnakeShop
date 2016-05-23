@@ -205,9 +205,14 @@ a:link{
   color:#24d6a6 ;
 }
 
-a:link:visited{
+a:visited{
   color:#24d6a6 ;
 }
+
+a:hover{
+  color:#24d6a6 ;
+}
+
 
 #footer{
     position: absolute;
