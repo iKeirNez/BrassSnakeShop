@@ -64,9 +64,7 @@ session_start();
                 <?php endif; ?>
 	        </div>
 	        <footer class="footer">
-		    <div id="footer">
                 	<?php include('includes/footer.php') ?>
-            		</div>
             	</footer>
         </div>
     </body>
