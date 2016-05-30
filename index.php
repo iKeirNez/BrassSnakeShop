@@ -43,10 +43,10 @@ session_start();
                     <legend>Sign In</legend>
 
                     <label for="username" class="vhide">Username</label>
-                    <input id="username" name="username" type="text" style="color:#AAB2BD" placeholder="Username" required minlength="2">
+                    <input id="username" name="username" type="text" style="color:#000" placeholder="Username" required minlength="2">
 
                     <label for="password" class="vhide">Password</label>
-                    <input id="password" name="password" type="password" style="color:#AAB2BD" placeholder="Password" required minlength="1">
+                    <input id="password" name="password" type="password" style="color:#000" placeholder="Password" required minlength="1">
 
                     <input type="checkbox" name="remember" id="remember" class="vhide">
                     <label for="remember">
