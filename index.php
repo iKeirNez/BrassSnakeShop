@@ -16,6 +16,10 @@ session_start();
     <title><?= WEBSITE_NAME ?></title>
     <!-- ADDITION OF EXTERNAL ASSETS - BC 16/05/16 15:33 -->
     <link rel="stylesheet" type="text/css" href="includes/css/main.css">
+    <!-- Main Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="includes/css/bootstrap.min.css">
+    <!-- Sticky Footer CSS -->
+    <link rel="stylesheet" type="text/css" href="includes/css/sfnavbar.css">
     <script src="includes/js/main.js"></script>
     <!-- END OF ADDITION - BC 16/05/16 15:33 -->
     </head>
@@ -59,9 +63,11 @@ session_start();
                 <!-- END OF ADDITION - BC 16/05/16 15:09 -->
                 <?php endif; ?>
 	        </div>
+	        <footer class="footer">
 		    <div id="footer">
-                <?php include('includes/footer.php') ?>
-            </div>
+                	<?php include('includes/footer.php') ?>
+            		</div>
+            	</footer>
         </div>
     </body>
 </html>
