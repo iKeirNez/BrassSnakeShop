@@ -36,8 +36,11 @@ require_once('config.php');
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="register.php">Register</a></li>
-            <li class="active"><a href="logout.php">Logout <span class="sr-only">(current)</span></a></li>
+            <?php if (isset($_SESSION['user'])): ?>
+              <li><a href="/register.php">Register</a></li>
+            <?php else: ?>
+              <li class="active"><a href="/logout.php">Logout <span class="sr-only">(current)</span></a></li>
+            <?php endif; ?>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
