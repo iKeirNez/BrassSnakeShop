@@ -16,10 +16,10 @@ session_start();
     <title><?= WEBSITE_NAME ?></title>
     <!-- ADDITION OF EXTERNAL ASSETS - BC 16/05/16 15:33 -->
     <link rel="stylesheet" type="text/css" href="includes/css/main.css">
-    <!-- Main Bootstrap CSS -->
+    <!-- Main Bootstrap CSS
     <link rel="stylesheet" type="text/css" href="includes/css/bootstrap.css">
-    <!-- Sticky Footer CSS -->
-    <link rel="stylesheet" type="text/css" href="includes/css/sfnavbar.css">
+     Sticky Footer CSS 
+    <link rel="stylesheet" type="text/css" href="includes/css/sfnavbar.css"> -->
     <script src="includes/js/main.js"></script>
     <!-- END OF ADDITION - BC 16/05/16 15:33 -->
     </head>
