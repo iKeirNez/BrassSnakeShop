@@ -186,7 +186,6 @@ body {
   font-size: 16px;
   background: #171a1e;
   color: #343B44;
-  padding: 1em 0 10em;
 }
 
 .vhide {
@@ -219,4 +218,8 @@ code {
 
 legend {
   color:#21B18B;
+}
+
+#content {
+  padding-left: 2%;
 }
