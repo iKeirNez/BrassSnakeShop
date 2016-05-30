@@ -52,6 +52,7 @@ if (!empty($_POST)) {
 <h2>Register</h2>
 
 <form action="register.php" method="post">
+    <fieldset>
     First Name:<br />
     <input type="text" name="first_name" value="" />
     <br /><br />
@@ -68,6 +69,7 @@ if (!empty($_POST)) {
     <input type="password" name="password" value="" />
     <br /><br />
     <input type="submit" value="Register" />
+    </fieldset>
 </form>
 
 <?php include ('includes/footer.php'); ?>
