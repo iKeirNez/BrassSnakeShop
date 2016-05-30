@@ -70,6 +70,6 @@ if (!empty($_POST)) {
     <input type="submit" value="Register" />
 </form>
 
-<?php include ('includes/footer.php');
+<?php include ('includes/footer.php'); ?>
 </body>
 </html>
