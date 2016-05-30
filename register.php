@@ -39,9 +39,15 @@ if (!empty($_POST)) {
     }
 }
 
-include('includes/header.php');
-
 ?>
+
+<html>
+<head>
+    <title><?= WEBSITE_NAME ?></title>
+    <?php include ('includes/head.php'); ?>
+</head>
+<body>
+<?php include ('includes/header.php'); ?>
 
 <h2>Register</h2>
 
@@ -65,3 +71,5 @@ include('includes/header.php');
 </form>
 
 <?php include ('includes/footer.php');
+</body>
+</html>
