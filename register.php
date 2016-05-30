@@ -49,25 +49,26 @@ if (!empty($_POST)) {
 <body>
 <?php include ('includes/header.php'); ?>
 
-<h2>Register</h2>
+
 
 <form action="register.php" method="post">
     <fieldset>
+        <h2>Register</h2>
     First Name:<br />
     <input type="text" name="first_name" value="" />
-    <br /><br />
+   
     Last Name:<br />
     <input type="text" name="last_name" value="" />
-    <br /><br />
+  
     Username:<br />
     <input type="text" name="username" value="" />
-    <br /><br />
+ 
     E-Mail:<br />
     <input type="text" name="email" value="" />
-    <br /><br />
+ 
     Password:<br />
     <input type="password" name="password" value="" />
-    <br /><br />
+    
     <input type="submit" value="Register" />
     </fieldset>
 </form>
