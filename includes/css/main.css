@@ -160,7 +160,7 @@ input[type=checkbox]:checked + label > i {
   text-shadow: 0 1px 0 #171a1e;
 }
 
-.signin {
+.signin, .submit {
   font-size: 1.2em;
   font-weight: 700;
   text-transform: uppercase;
@@ -177,7 +177,7 @@ input[type=checkbox]:checked + label > i {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.signin:hover {
+.signin:hover, .submit:hover {
   opacity: 1;
 }
 
