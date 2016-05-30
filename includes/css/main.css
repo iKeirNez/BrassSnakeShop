@@ -213,13 +213,3 @@ a:hover{
   color:#24d6a6 ;
 }
 
-
-#footer{
-    position: relative;
-    bottom: 0;
-    height: 50px;
-    width: 100%;padding: 0.5em 2em;
-    margin: 2em 0 0;
-    vertical-align: middle;
-    display: block;
-}
