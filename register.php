@@ -39,21 +39,14 @@ if (!empty($_POST)) {
     }
 }
 
+include('includes/header.php');
 ?>
 
-<html>
-<head>
-    <title><?= WEBSITE_NAME ?></title>
-    <?php include ('includes/head.php'); ?>
-</head>
-<body>
-<?php include ('includes/header.php'); ?>
-
-
+        <h2>Register</h2>
 
 <form action="register.php" method="post">
     <fieldset>
-        <h2>Register</h2>
+
     First Name:<br />
     <input type="text" name="first_name" value="" />
    
