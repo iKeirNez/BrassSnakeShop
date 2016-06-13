@@ -40,7 +40,7 @@ session_start();
                     <td><p>1</p></td>
                     <td><p>Name of a Product</p></td>
                     <td><p>This is a sample description</p></td>
-                    <td><p>£20.00</p></td>
+                    <td><p>&pound;20.00</p></td>
                 </tr>
             </table>
         <?php else: ?>
