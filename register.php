@@ -41,7 +41,11 @@ if (!empty($_POST)) {
 
 include('includes/header.php');
 ?>
-
+<html>
+<head>
+    <title><?= WEBSITE_NAME ?></title>
+    <?php include('includes/head.php') ?>
+</head>
         <h2>Register</h2>
 
 <form action="register.php" method="post">
@@ -62,7 +66,7 @@ include('includes/header.php');
     Password:<br />
     <input type="password" name="password" value="" />
     
-    <input type="submit" value="Register" />
+    <input type="submit" class="signin" value="Register" />
     </fieldset>
 </form>
 
