@@ -38,13 +38,15 @@ if (!empty($_POST)) {
 </head>
 <body>
 <?php include ('includes/header.php'); ?>
-    <h2>Change Password</h2>
 
     <form action="changepass.php" method="post">
+        <fieldset>
+        <legend>Change Password</legend>
         New Password:<br />
         <input type="password" name="password" value="" />
         <br /><br />
         <input type="submit" value="Change" />
+        </fieldset>
     </form>
 
 <?php include ('includes/footer.php'); ?>
