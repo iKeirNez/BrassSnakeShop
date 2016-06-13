@@ -52,19 +52,19 @@ include('includes/header.php');
     <fieldset>
     <legend>Register</legend>
     First Name:<br />
-    <input type="text" name="first_name" value="" />
+    <input type="text" name="first_name" class="vhide" value="First Name" />
    
     Last Name:<br />
-    <input type="text" name="last_name" value="" />
+    <input type="text" name="last_name" class="vhide" value="Surname" />
   
     Username:<br />
-    <input type="text" name="username" value="" />
+    <input type="text" name="username" class="vhide" value="Username" />
  
     E-Mail:<br />
-    <input type="text" name="email" value="" />
+    <input type="text" name="email" class="vhide" value="email@provider.com" />
  
     Password:<br />
-    <input type="password" name="password" value="" />
+    <input type="password" name="password" class="vhide" value="password" />
     
     <input type="submit" class="signin" value="Register" />
     </fieldset>
