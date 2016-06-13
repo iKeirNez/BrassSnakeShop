@@ -24,7 +24,7 @@ session_start();
     </div>
     <div id="content">
         <?php if (isset($_SESSION['user'])): ?>
-            <h1>Welcome back, <?= $_SESSION['user']->getFirstName(); ?></h1>
+            <h1>Welcome back, <strong><?= $_SESSION['user']->getFirstName(); ?></strong></h1>
             <h2>Order History</h2>
 
             <table>
