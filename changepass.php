@@ -45,7 +45,7 @@ if (!empty($_POST)) {
         New Password:<br />
         <input type="password" name="password" value="" />
         <br /><br />
-        <input type="submit" value="Change" />
+        <input type="submit" class="signin" value="Change" />
         </fieldset>
     </form>
 
