@@ -30,17 +30,23 @@ if (!empty($_POST)) {
     }
 }
 
-include ('includes/header.php');
-
 ?>
+<html>
+<head>
+    <title>Change Password - <?= WEBSITE_NAME ?></title>
+    <?php include ('includes/head.php'); ?>
+</head>
+<body>
+<?php include ('includes/header.php'); ?>
+    <h2>Change Password</h2>
 
-<h2>Change Password</h2>
+    <form action="changepass.php" method="post">
+        New Password:<br />
+        <input type="password" name="password" value="" />
+        <br /><br />
+        <input type="submit" value="Change" />
+    </form>
 
-<form action="changepass.php" method="post">
-    New Password:<br />
-    <input type="password" name="password" value="" />
-    <br /><br />
-    <input type="submit" value="Change" />
-</form>
-
-<?php include ('includes/footer.php');
+<?php include ('includes/footer.php'); ?>
+</body>
+</html>
