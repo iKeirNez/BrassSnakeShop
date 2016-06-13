@@ -46,11 +46,11 @@ include('includes/header.php');
     <title><?= WEBSITE_NAME ?></title>
     <?php include('includes/head.php') ?>
 </head>
-        <h2>Register</h2>
+
 
 <form action="register.php" method="post">
     <fieldset>
-
+    <legend>Register</legend>
     First Name:<br />
     <input type="text" name="first_name" value="" />
    
