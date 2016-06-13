@@ -28,8 +28,8 @@ session_start();
 
             <table style="border: 1px solid; padding: 5px;">
                 <tr>
-                    <td><p><strong>Header 1</strong></p></td>
-                    <td><p><strong>Header w</strong></p></td>
+                    <th><p>Header 1</p></th>
+                    <th><p>Header 2</p></th>
                 </tr>
 
                 <tr>
