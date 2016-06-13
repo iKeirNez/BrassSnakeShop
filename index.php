@@ -30,13 +30,17 @@ session_start();
 
             <table>
                 <tr>
-                    <th><p>Header 1</p></th>
-                    <th><p>Header 2</p></th>
+                    <th><p>Order No.</p></th>
+                    <th><p>Name</p></th>
+                    <th><p>Description</p></th>
+                    <th><p>Cost</p></th>
                 </tr>
 
                 <tr>
-                    <td><p>Content 1</p></td>
-                    <td><p>Content 2</p></td>
+                    <td><p>1</p></td>
+                    <td><p>Name of a Product</p></td>
+                    <td><p>This is a sample description</p></td>
+                    <td><p>£20.00</p></td>
                 </tr>
             </table>
         <?php else: ?>
