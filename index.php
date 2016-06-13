@@ -26,6 +26,7 @@ session_start();
         <?php if (isset($_SESSION['user'])): ?>
             <h1>Welcome back, <strong><?= $_SESSION['user']->getFirstName(); ?></strong></h1>
             <h2>Order History</h2>
+            <br />
 
             <table>
                 <tr>
