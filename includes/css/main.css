@@ -223,3 +223,8 @@ legend {
 #content {
   padding-left: 2%;
 }
+
+table td, table th {
+  border: 1px solid black;
+  padding: 5px;
+}

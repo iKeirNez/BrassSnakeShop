@@ -26,7 +26,7 @@ session_start();
         <?php if (isset($_SESSION['user'])): ?>
             <p>Welcome back, <?= $_SESSION['user']->getFirstName(); ?></p>
 
-            <table style="border: 1px solid; padding: 5px;">
+            <table>
                 <tr>
                     <th><p>Header 1</p></th>
                     <th><p>Header 2</p></th>
