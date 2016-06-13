@@ -26,15 +26,15 @@ session_start();
         <?php if (isset($_SESSION['user'])): ?>
             <p>Welcome back, <?= $_SESSION['user']->getFirstName(); ?></p>
 
-            <table>
+            <table style="border: 1px solid; padding: 5px;">
                 <tr>
-                    <td><b>Header 1</b></td>
-                    <td><b>Header 2</b></td>
+                    <td><p><strong>Header 1</strong></p></td>
+                    <td><p><strong>Header w</strong></p></td>
                 </tr>
 
                 <tr>
-                    <td>Content 1</td>
-                    <td>Content 2</td>
+                    <td><p>Content 1</p></td>
+                    <td><p>Content 2</p></td>
                 </tr>
             </table>
         <?php else: ?>
